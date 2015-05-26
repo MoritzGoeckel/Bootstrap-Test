@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title><!-- Insert your title here --></title>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+    <style type="text/css">
+    .standartcell{
+        height: 250px;
+        padding: 5px;
+    }
+    
+    .headlinecell{
+        padding-top: 10px;
+        padding-bottom:  10px;
+        height: 100px;
+    }
+    </style>
+    
+    <script>
+        
+        $(document).ready(function(){
+            
+            init();
+            
+            });
+        
+        var init = function(){
+            renderDayList("today", createTestData().words);
+        }
+        
+        var createTestData = function(){
+            return { words: [{word:"hallo", count:10}, {word:"hallo", count:10}, {word:"hallo", count:10}] };
+        }
+        
+        var renderDayList = function(id, list){
+            $("#" + id).html("");
+            
+            for(var i = 0; i < list.size; i++)
+                console.log(list[i].word);
+                //$("#" + id).append(list.get(i).word + "<br />");           
+        }
+        
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-12 headlinecell">
+                <h1 style="text-align:center;">Headline</h1>
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            
+            <div class="col-md-4 standartcell">
+                <h2>Today</h2>
+                <p id="today"></p>
+            </div>
+            
+            <div class="col-md-8 standartcell">
+                <h2>Week</h2>
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            
+            <div class="col-md-2 standartcell">
+                <h2>Suche</h2>
+            </div>
+            
+            <div class="col-md-6 standartcell">
+                <h2>Stats</h2>
+            </div>
+            
+            <div class="col-md-4 standartcell">
+                <h2>Articles</h2>
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            
+            <div class="col-md-12 headlinecell">
+                <h1 style="text-align:center;">Twitter</h1>
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            
+            <div class="col-md-4 standartcell">
+                <h2>Today</H2>
+            </div>
+            
+            <div class="col-md-8 standartcell">
+                <h2>Week</H2>
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            
+            <div class="col-md-12 standartcell">
+                <h2>Tweets</H2>
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            
+            <div class="col-md-12 standartcell">
+                <h2>Footer</H2>
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+</html>
